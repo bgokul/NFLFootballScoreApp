@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">NFLFootballScore</string>
+    <string name="team_name_1">Pittsburgh Steelers</string>
+    <string name="team_name_2">Seattle Seahawks</string>
+    <string name="offense_score_1">Touch Down</string>
+    <string name="offense_score_2">1 Point PAT</string>
+    <string name="offense_score_3">2 Point PAT</string>
+    <string name="offense_score_4">Field Goal</string>
+    <string name="default_score">0</string>
+</resources>
