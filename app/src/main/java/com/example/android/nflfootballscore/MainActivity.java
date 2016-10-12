@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity  {
     int scoreTeamA = 0;
     int scoreTeamB = 0;
 
@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Displays the given score for Team A.
+     * Displays the given score for Team A and Team B.
      */
     public void displayForTeamA(int score) {
         TextView scoreView = (TextView) findViewById(R.id.team_a_score);
@@ -44,20 +44,17 @@ public class MainActivity extends AppCompatActivity {
         TextView scoreView = (TextView) findViewById(R.id.team_b_score);
         scoreView.setText(String.valueOf(scoreTeamB));
     }
-
     /**
      * Adds three points to the team score.
      */
     public void addThreePointsForTeamA(View view) {
         scoreTeamA = scoreTeamA + 3;
-        TextView scoreView = (TextView) findViewById(R.id.team_a_score);
-        scoreView.setText(String.valueOf(scoreTeamA));
+        displayForTeamA(scoreTeamA);
     }
 
     public void addThreePointsForTeamB(View view) {
         scoreTeamB = scoreTeamB + 3;
-        TextView scoreView = (TextView) findViewById(R.id.team_b_score);
-        scoreView.setText(String.valueOf(scoreTeamB));
+        displayForTeamB(scoreTeamB);
     }
 
     /**
@@ -65,14 +62,12 @@ public class MainActivity extends AppCompatActivity {
      */
     public void addTwoPointsForTeamA(View view) {
         scoreTeamA = scoreTeamA + 2;
-        TextView scoreView = (TextView) findViewById(R.id.team_a_score);
-        scoreView.setText(String.valueOf(scoreTeamA));
+        displayForTeamA(scoreTeamA);
     }
 
     public void addTwoPointsForTeamB(View view) {
         scoreTeamB = scoreTeamB + 2;
-        TextView scoreView = (TextView) findViewById(R.id.team_b_score);
-        scoreView.setText(String.valueOf(scoreTeamB));
+        displayForTeamB(scoreTeamB);
     }
 
     /**
@@ -80,14 +75,12 @@ public class MainActivity extends AppCompatActivity {
      */
     public void addOnePointForTeamA(View view) {
         scoreTeamA = scoreTeamA + 1;
-        TextView scoreView = (TextView) findViewById(R.id.team_a_score);
-        scoreView.setText(String.valueOf(scoreTeamA));
+        displayForTeamA(scoreTeamA);
     }
 
     public void addOnePointForTeamB(View view) {
         scoreTeamB = scoreTeamB + 1;
-        TextView scoreView = (TextView) findViewById(R.id.team_b_score);
-        scoreView.setText(String.valueOf(scoreTeamB));
+        displayForTeamB(scoreTeamB);
     }
 
     /**
